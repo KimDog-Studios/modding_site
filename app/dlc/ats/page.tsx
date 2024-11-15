@@ -22,15 +22,23 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const itemData = [
-  { img: '/assets/Mods/ETS2/kimdog_mod_pack/1.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/2.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/3.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/4.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/5.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/6.png' },
+  { img: '/assets/DLC/ATS/1.jpg' },
+  { img: '/assets/DLC/ATS/2.jpg' },
+  { img: '/assets/DLC/ATS/3.jpg' },
+  { img: '/assets/DLC/ATS/4.jpg' },
+  { img: '/assets/DLC/ATS/5.jpg' },
+  { img: '/assets/DLC/ATS/6.jpg' },
+  { img: '/assets/DLC/ATS/7.jpg' },
+  { img: '/assets/DLC/ATS/8.jpg' },
+  { img: '/assets/DLC/ATS/9.jpg' },
+  { img: '/assets/DLC/ATS/10.jpg' },
+  { img: '/assets/DLC/ATS/11.jpg' },
+  { img: '/assets/DLC/ATS/12.jpg' },
+  { img: '/assets/DLC/ATS/13.jpg' },
+  { img: '/assets/DLC/ATS/14.jpg' },
 ];
 
-const modName = [{ name: "KimDog's Network Mod Pack" }];
+const modName = [{ name: "ATS All DLC" }];
 
 function Page() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
@@ -73,7 +81,7 @@ function Page() {
 
   const handleProceed = () => {
     window.open(
-      'https://drive.google.com/file/d/1HO0b4pI1Qrt3eIAgntycIGdjbuuAjGxJ/view?usp=sharing',
+      'https://modsfire.com/X1Kvhzwyxg290co',
       '_blank'
     );
     setOpen(false);
@@ -98,9 +106,9 @@ function Page() {
         </div>
 
         {/* In-Game Images and Description */}
-        <div className='flex flex-col md:flex-row mt-5 gap-5'>
+        <div className='flex flex-col md:flex-row mt-10 gap-10'>
           {/* Images Section */}
-          <div className='flex-1 flex justify-center md:justify-end'>
+          <div className='flex-1 flex justify-center md:justify-end max-h-screen'>
             <ImageList
               sx={{
                 width: 680,
@@ -108,7 +116,7 @@ function Page() {
                 '&::-webkit-scrollbar': { display: 'none' }, // Hide scrollbar
               }}
               cols={2}
-              rowHeight={100}
+              rowHeight={150}
               gap={20}
             >
               {itemData.map((item) => (
@@ -131,17 +139,24 @@ function Page() {
           <div className='flex-1 md:ml-12'>
             <h2 className='text-2xl font-bold mb-4'>Description:</h2>
             <p className='text-lg leading-relaxed'>
-              This mod pack includes a variety of mods:
+              This includes all the ATS DLC:
               <ul className='list-disc ml-5 mt-2'>
-                <li>Engines</li>
-                <li>Trucks</li>
-                <li>Tuning Parts</li>
-                <li>Trailers</li>
-                <li>Skins</li>
-                <li>Traffic Adjustments</li>
+                <li>Arkansas</li>
+                <li>Nebraska</li>
+                <li>Kansas</li>
+                <li>Oklahoma</li>
+                <li>Texas</li>
+                <li>Montana</li>
+                <li>Wyoming</li>
+                <li>Colorado</li>
+                <li>Idaho</li>
+                <li>Utah</li>
+                <li>Arizona</li>
+                <li>Missouri</li>
+                <li>Iowa</li>
+                <li>Louisiana</li>
               </ul>
               <br />
-              Credits to everyone whose items are included in the Mod Pack.
             </p>
             <div className='mt-8'>
               <Button variant='contained' color='primary' onClick={handleClickOpen}>
@@ -161,7 +176,7 @@ function Page() {
         >
           <DialogTitle id='alert-dialog-title'>Confirm Download</DialogTitle>
           <DialogContent>
-            <p>Are you sure you want to download this: {modName[0].name}?</p>
+            <p>Are you sure you want to download: {modName[0].name}?</p>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color='primary'>

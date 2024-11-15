@@ -86,6 +86,16 @@ const mods: Mod[] = [
       link: "/mods/ats/realistic_economy",
       mp_optional: 'Yes',
     },
+    {
+      id: 4,
+      img: '/assets/DLC/ATS.webp',
+      title: "ATS All DLC",
+      game: "ATS",
+      version: "1.52",
+      author: "MosbyMods.de",
+      link: "/dlc/ats",
+      mp_optional: 'Yes',
+    }
 ];
 
 export { mods, verifiedAuthors };

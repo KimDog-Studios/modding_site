@@ -67,7 +67,7 @@ const Page: React.FC = () => {
   }
 
   return (
-    <div className='flex h-screen overflow-hidden bg-gradient-to-b from-blue-900 to-blue-600'>
+    <div className='flex h-screen overflow-hidden bg-gradient-to-b bg-black'>
       {/* Sidebar */}
       <Sidebar
         selectedFilters={selectedFilters}

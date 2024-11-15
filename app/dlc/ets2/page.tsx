@@ -1,15 +1,24 @@
 'use client';
 
 import Sidebar from '@/components/Sidebar';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Slide } from '@mui/material';
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Slide,
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ImageList, ImageListItem } from '@mui/material';
-import GradientCircularProgress from "@/components/Main"
+import GradientCircularProgress from '@/components/Main';
 
-// Transition component for the dialog
-const Transition = React.forwardRef(function Transition(props: any, ref: React.Ref<unknown>) {
-  return <Slide direction="up" ref={ref} {...props} />;
+const Transition = React.forwardRef(function Transition(
+  props: any,
+  ref: React.Ref<unknown>
+) {
+  return <Slide direction='up' ref={ref} {...props} />;
 });
 
 const itemData = [
@@ -22,39 +31,35 @@ const itemData = [
   { img: '/assets/DLC/ETS2/7.jpg' },
   { img: '/assets/DLC/ETS2/8.jpg' },
   { img: '/assets/DLC/ETS2/9.jpg' },
+  { img: '/assets/DLC/ETS2/10.jpg' },
 ];
 
-const modName = [
-  { name: "ETS 2 All DLC"}
-]
+const modName = [{ name: "ETS 2 All DLC" }];
 
 function Page() {
-  // Define state variables
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
 
-    // Simulate data fetching or loading
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Stop loading after 3 seconds
+      setLoading(false);
     }, 2200);
-        return () => clearTimeout(timer);
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className='flex items-center justify-center h-screen'>
+      <div className='flex items-center justify-center h-screen bg-black'>
         <GradientCircularProgress />
-        </div>
+      </div>
     );
   }
 
-  // Handlers
   const handleFilterChange = (game: string, checked: boolean) => {
-    setSelectedFilters(prevFilters =>
-      checked ? [...prevFilters, game] : prevFilters.filter(filter => filter !== game)
+    setSelectedFilters((prevFilters) =>
+      checked ? [...prevFilters, game] : prevFilters.filter((filter) => filter !== game)
     );
   };
 
@@ -71,13 +76,15 @@ function Page() {
   };
 
   const handleProceed = () => {
-    // Open the direct download link in a new tab
-    window.open('https://modsfire.com/cI9o0331c0gM1L0', '_blank');
+    window.open(
+      'https://modsfire.com/cI9o0331c0gM1L0',
+      '_blank'
+    );
     setOpen(false);
   };
 
   return (
-    <div className='flex'>
+    <div className='flex bg-black min-h-screen overflow-hidden'>
       {/* Sidebar */}
       <Sidebar
         selectedFilters={selectedFilters}
@@ -88,50 +95,63 @@ function Page() {
       />
 
       {/* Main Content */}
-      <div className='flex-1 mt-0 p-8'>
+      <div className='flex-1 p-8 text-white'>
         {/* Title */}
-        <div className='flex justify-center items-center mt-10'>
-          <h1 className='font-bold text-3xl'>{modName[0].name}</h1>
+        <div className='flex justify-center items-center mt-24 mb-12'>
+          <h1 className='font-bold text-4xl'>{modName[0].name}</h1>
         </div>
 
         {/* In-Game Images and Description */}
-        <div className='flex flex-col md:flex-row mt-14'>
+        <div className='flex flex-col md:flex-row mt-10 gap-10'>
           {/* Images Section */}
-          <div className='flex-1 md:mr-8'>
-            <div className='w-full flex justify-center ml-56'>
-              <ImageList sx={{ width: 800, height: 778 }} cols={3} rowHeight={256}>
-                {itemData.map((item) => (
-                  <ImageListItem key={item.img}>
-                    <Image
-                      src={item.img}
-                      alt='Game Image'
-                      width={256}
-                      height={256}
-                    />
-                  </ImageListItem>
-                ))}
-              </ImageList>
-            </div>
+          <div className='flex-1 flex justify-center md:justify-end max-h-screen'>
+            <ImageList
+              sx={{
+                width: 680,
+                height: 680,
+                '&::-webkit-scrollbar': { display: 'none' }, // Hide scrollbar
+              }}
+              cols={2}
+              rowHeight={150}
+              gap={20}
+            >
+              {itemData.map((item) => (
+                <ImageListItem
+                  key={item.img}
+                >
+                  <Image
+                    src={item.img}
+                    alt='Game Image'
+                    width={320}
+                    height={300}
+                    className='rounded-lg'
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
           </div>
 
           {/* Description Section */}
-          <div className='flex-1'>
-            <h2 className='text-xl font-bold mb-4'>Description:</h2>
-            <p className='text-lg'>
-              This Includes all the DLC for ETS 2!<br />
-              . Beyond the Baltic Sea<br />
-              . Going East<br />
-              . Heart of Russia<br />
-              . Iberia<br />
-              . Italia<br />
-              . Road to the Black Sea<br />
-              . Scandinavia<br />
-              . Vive LA France<br />
-              . West Balkans<br />
-              . Nordic Horizons | Comes out when its offically been Released by SCS Software!<br />
+          <div className='flex-1 md:ml-12'>
+            <h2 className='text-2xl font-bold mb-4'>Description:</h2>
+            <p className='text-lg leading-relaxed'>
+              This includes all the ETS 2 DLC:
+              <ul className='list-disc ml-5 mt-2'>
+                <li>Beyond the Baltic Sea</li>
+                <li>Going East</li>
+                <li>Heart of Russia</li>
+                <li>Iberia</li>
+                <li>Italia</li>
+                <li>Road to the Black Sea</li>
+                <li>Scandinavia</li>
+                <li>Vive LA France</li>
+                <li>Nordic Horizons</li>
+                <li>Greece</li>
+              </ul>
+              <br />
             </p>
-            <div className='mt-4'>
-              <Button variant="contained" onClick={handleClickOpen}>
+            <div className='mt-8'>
+              <Button variant='contained' color='primary' onClick={handleClickOpen}>
                 Download
               </Button>
             </div>
@@ -143,20 +163,18 @@ function Page() {
           open={open}
           onClose={handleClose}
           TransitionComponent={Transition}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
+          aria-labelledby='alert-dialog-title'
+          aria-describedby='alert-dialog-description'
         >
-          <DialogTitle id="alert-dialog-title">
-            Confirm Download
-          </DialogTitle>
+          <DialogTitle id='alert-dialog-title'>Confirm Download</DialogTitle>
           <DialogContent>
-            <p>Are you sure you want to download this: {modName[0].name}</p>
+            <p>Are you sure you want to download: {modName[0].name}?</p>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} color="primary">
+            <Button onClick={handleClose} color='primary'>
               Cancel
             </Button>
-            <Button onClick={handleProceed} color="primary" autoFocus>
+            <Button onClick={handleProceed} color='primary' autoFocus>
               Proceed
             </Button>
           </DialogActions>
