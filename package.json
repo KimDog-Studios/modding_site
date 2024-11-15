@@ -16,7 +16,7 @@
     "@mui/material": "^5.16.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@vercel/speed-insights": "^1.0.12",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "firebase": "^10.12.4",
     "framer-motion": "^11.3.19",
     "next": "14.2.5",
