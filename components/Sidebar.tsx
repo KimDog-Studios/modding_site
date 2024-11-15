@@ -6,6 +6,7 @@ import { FormGroup, FormControlLabel, Checkbox, TextField, InputAdornment, IconB
 import ClearIcon from '@mui/icons-material/Clear';
 import { mods as modData } from '@/components/Main';  // Import DLC data if needed
 import { Typewriter } from 'react-simple-typewriter'
+import { FaUser } from 'react-icons/fa';
 
 type Props = {
   selectedFilters: string[];
@@ -102,6 +103,11 @@ const Sidebar: React.FC<Props> = ({ selectedFilters, onFilterChange, searchQuery
           <Link href="/" className='flex items-center space-x-2 text-white hover:text-purple-500 transition'>
             <HomeIcon className='w-6 h-6 md:w-8 md:h-8' />
             <p className='text-sm md:text-base'>Home</p>
+          </Link>
+
+          <Link href="/profiles" className='flex items-center space-x-2 text-white hover:text-purple-500 transition'>
+            <FaUser className='w-6 h-6 md:w-8 md:h-8' />
+            <p className='text-sm md:text-base'>Profiles</p>
           </Link>
 
         </div>

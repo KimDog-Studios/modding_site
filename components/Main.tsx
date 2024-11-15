@@ -42,6 +42,7 @@ export default function LoadingScreen() {
   );
 }
 
+// Define Mod interface
 export interface Mod {
   id: number;
   img: string;
@@ -53,49 +54,86 @@ export interface Mod {
   mp_optional: string;
 }
 
+// Define Profile interface
+export interface Profile {
+  id: number;
+  name: string;
+  username: string;
+  img: string;
+  location: string;
+  link: string;
+  company: string;
+  author: string;
+}
+
 const verifiedAuthors = ['KimDog', 'SCS Software'];
 
+// Mod Data
 const mods: Mod[] = [
-    {
-      id: 1,
-      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
-      title: "KimDog's Network Mod Pack",
-      game: "ETS 2",
-      version: "1.52",
-      author: "KimDog",
-      link: "/mods/ets2/kimdog-network-mod-pack",
-      mp_optional: 'Yes',
-    },
-    {
-      id: 2,
-      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2.jpeg',
-      title: "ETS 2 All DLC",
-      game: "ETS 2",
-      version: "1.52",
-      author: "MosbyMods.de",
-      link: "/dlc/ets2",
-      mp_optional: 'Yes',
-    },
-    {
-      id: 3,
-      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
-      title: "Realistic Economy",
-      game: "ATS",
-      version: "1.52",
-      author: "KimDog",
-      link: "/mods/ats/realistic_economy",
-      mp_optional: 'Yes',
-    },
-    {
-      id: 4,
-      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS.webp',
-      title: "ATS All DLC",
-      game: "ATS",
-      version: "1.52",
-      author: "MosbyMods.de",
-      link: "/dlc/ats",
-      mp_optional: 'Yes',
-    }
+  {
+    id: 1,
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
+    title: "KimDog's Network Mod Pack",
+    game: "ETS 2",
+    version: "1.52",
+    author: "KimDog",
+    link: "/mods/ets2/kimdog-network-mod-pack",
+    mp_optional: 'Yes',
+  },
+  {
+    id: 2,
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2.jpeg',
+    title: "ETS 2 All DLC",
+    game: "ETS 2",
+    version: "1.52",
+    author: "MosbyMods.de",
+    link: "/dlc/ets2",
+    mp_optional: 'Yes',
+  },
+  {
+    id: 3,
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
+    title: "Realistic Economy",
+    game: "ATS",
+    version: "1.52",
+    author: "KimDog",
+    link: "/mods/ats/realistic_economy",
+    mp_optional: 'Yes',
+  },
+  {
+    id: 4,
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS.webp',
+    title: "ATS All DLC",
+    game: "ATS",
+    version: "1.52",
+    author: "MosbyMods.de",
+    link: "/dlc/ats",
+    mp_optional: 'Yes',
+  },
 ];
 
-export { mods, verifiedAuthors };
+// Profile Data
+const profiles: Profile[] = [
+  {
+    id: 1,
+    name: "ETS 2 Modded Profile",
+    username: "KimDog Network",
+    company: "KimDog Logistics",
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2.jpeg',
+    location: "Europe",
+    link: "/profiles/ets2_modded_profile",
+    author: "KimDog",
+  },
+  {
+    id: 2,
+    name: "ATS Modded Profile",
+    username: "KimDog Network",
+    company: "KimDog Logistics",
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS.webp',
+    location: "USA",
+    link: "/profile/janesmith",
+    author: "KimDog",
+  },
+];
+
+export { mods, profiles, verifiedAuthors };
