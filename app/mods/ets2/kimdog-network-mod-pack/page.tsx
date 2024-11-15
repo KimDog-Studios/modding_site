@@ -140,6 +140,7 @@ function Page() {
                 <li>Trailers</li>
                 <li>Skins</li>
                 <li>Traffic Adjustments</li>
+                <li>Real Traffic Skins</li>
               </ul>
               <br />
               Credits to everyone whose items are included in the Mod Pack.
@@ -166,7 +167,7 @@ function Page() {
         >
           <DialogTitle id='alert-dialog-title'>Confirm Download</DialogTitle>
           <DialogContent>
-            <p>Are you sure you want to download this: {modName[0].name}?</p>
+            <p>Are you sure you want to download: {modName[0].name}?</p>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color='primary'>
