@@ -23,16 +23,16 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const itemData = [
-  { img: '/assets/DLC/ETS2/1.jpg' },
-  { img: '/assets/DLC/ETS2/2.jpg' },
-  { img: '/assets/DLC/ETS2/3.jpg' },
-  { img: '/assets/DLC/ETS2/4.jpg' },
-  { img: '/assets/DLC/ETS2/5.jpg' },
-  { img: '/assets/DLC/ETS2/6.jpg' },
-  { img: '/assets/DLC/ETS2/7.jpg' },
-  { img: '/assets/DLC/ETS2/8.jpg' },
-  { img: '/assets/DLC/ETS2/9.jpg' },
-  { img: '/assets/DLC/ETS2/10.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/1.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/2.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/3.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/4.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/5.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/6.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/7.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/8.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/9.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2/10.jpg' },
 ];
 
 const modName = [{ name: "ETS 2 All DLC" }];

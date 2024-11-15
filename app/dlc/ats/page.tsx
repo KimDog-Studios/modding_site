@@ -23,20 +23,20 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const itemData = [
-  { img: '/assets/DLC/ATS/1.jpg' },
-  { img: '/assets/DLC/ATS/2.jpg' },
-  { img: '/assets/DLC/ATS/3.jpg' },
-  { img: '/assets/DLC/ATS/4.jpg' },
-  { img: '/assets/DLC/ATS/5.jpg' },
-  { img: '/assets/DLC/ATS/6.jpg' },
-  { img: '/assets/DLC/ATS/7.jpg' },
-  { img: '/assets/DLC/ATS/8.jpg' },
-  { img: '/assets/DLC/ATS/9.jpg' },
-  { img: '/assets/DLC/ATS/10.jpg' },
-  { img: '/assets/DLC/ATS/11.jpg' },
-  { img: '/assets/DLC/ATS/12.jpg' },
-  { img: '/assets/DLC/ATS/13.jpg' },
-  { img: '/assets/DLC/ATS/14.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/1.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/2.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/3.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/4.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/5.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/6.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/7.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/8.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/9.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/10.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/11.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/12.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/13.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS/14.jpg' },
 ];
 
 const modName = [{ name: "ATS All DLC" }];

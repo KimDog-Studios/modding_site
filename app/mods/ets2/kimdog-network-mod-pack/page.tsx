@@ -23,12 +23,12 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const itemData = [
-  { img: '/assets/Mods/ETS2/kimdog_mod_pack/1.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/2.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/3.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/4.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/5.png' },
-  { img: '/assets/mods/ETS2/kimdog_mod_pack/6.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/1.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/2.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/3.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/4.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/5.png' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/kimdog_mod_pack/6.png' },
 ];
 
 const modName = [{ name: "KimDog's Network Mod Pack" }];
