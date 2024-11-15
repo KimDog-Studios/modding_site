@@ -58,7 +58,7 @@ const verifiedAuthors = ['KimDog', 'SCS Software'];
 const mods: Mod[] = [
     {
       id: 1,
-      img: '/assets/KimDogLogo.png',
+      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
       title: "KimDog's Network Mod Pack",
       game: "ETS 2",
       version: "1.52",
@@ -68,7 +68,7 @@ const mods: Mod[] = [
     },
     {
       id: 2,
-      img: '/assets/DLC/ETS2.jpeg',
+      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ETS2.jpeg',
       title: "ETS 2 All DLC",
       game: "ETS 2",
       version: "1.52",
@@ -77,8 +77,8 @@ const mods: Mod[] = [
       mp_optional: 'Yes',
     },
     {
-      id: 2,
-      img: '/assets/KimDogLogo.png',
+      id: 3,
+      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png',
       title: "Realistic Economy",
       game: "ATS",
       version: "1.52",
@@ -88,7 +88,7 @@ const mods: Mod[] = [
     },
     {
       id: 4,
-      img: '/assets/DLC/ATS.webp',
+      img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/DLC/ATS.webp',
       title: "ATS All DLC",
       game: "ATS",
       version: "1.52",
