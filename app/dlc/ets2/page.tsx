@@ -13,6 +13,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ImageList, ImageListItem } from '@mui/material';
 import GradientCircularProgress from '@/components/Main';
+import OtherMods from '@/components/OtherMods';
 
 const Transition = React.forwardRef(function Transition(
   props: any,
@@ -102,7 +103,7 @@ function Page() {
         </div>
 
         {/* In-Game Images and Description */}
-        <div className='flex flex-col md:flex-row mt-10 gap-10'>
+        <div className='flex flex-col md:flex-row mt-5 gap-5'>
           {/* Images Section */}
           <div className='flex-1 flex justify-center md:justify-end max-h-screen'>
             <ImageList
@@ -157,6 +158,11 @@ function Page() {
             </div>
           </div>
         </div>
+
+        <div className='flex justify-center mt-20 font-black text-2xl'>
+          <OtherMods/>
+        </div>
+        
 
         {/* Dialog for Confirmation */}
         <Dialog

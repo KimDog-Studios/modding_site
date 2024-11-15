@@ -13,6 +13,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ImageList, ImageListItem } from '@mui/material';
 import GradientCircularProgress from '@/components/Main';
+import OtherMods from '@/components/OtherMods';
 
 const Transition = React.forwardRef(function Transition(
   props: any,
@@ -164,6 +165,10 @@ function Page() {
               </Button>
             </div>
           </div>
+        </div>
+
+        <div className='flex justify-center mt-20 font-black text-2xl'>
+          <OtherMods/>
         </div>
 
         {/* Dialog for Confirmation */}
