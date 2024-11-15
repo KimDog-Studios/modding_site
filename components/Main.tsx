@@ -50,6 +50,7 @@ export interface Mod {
   version: string;
   author: string;
   link: string;
+  mp_optional: string;
 }
 
 const verifiedAuthors = ['KimDog', 'SCS Software'];
@@ -63,6 +64,7 @@ const mods: Mod[] = [
       version: "1.52",
       author: "KimDog",
       link: "/mods/ets2/kimdog-network-mod-pack",
+      mp_optional: 'Yes',
     },
     {
       id: 2,
@@ -72,6 +74,7 @@ const mods: Mod[] = [
       version: "1.52",
       author: "MosbyMods.de",
       link: "/dlc/ets2",
+      mp_optional: 'Yes',
     },
     {
       id: 2,
@@ -81,6 +84,7 @@ const mods: Mod[] = [
       version: "1.52",
       author: "KimDog",
       link: "/mods/ats/realistic_economy",
+      mp_optional: 'Yes',
     },
 ];
 

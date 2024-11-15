@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { Tooltip } from '@mui/material';
-import { mods as allMods, verifiedAuthors, Mod} from '@/components/Main'; // Import data script
+import { mods as allMods, verifiedAuthors, Mod } from '@/components/Main'; // Import data script
 import Image from 'next/image';
 import { FaDownload, FaCheckCircle, FaGamepad, FaUser } from 'react-icons/fa';
 import Sidebar from '@/components/Sidebar';
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
   }
 
   return (
-    <div className='flex h-screen overflow-hidden bg-gray-900'>
+    <div className='flex h-screen overflow-hidden bg-gradient-to-b from-blue-900 to-blue-600'>
       {/* Sidebar */}
       <Sidebar
         selectedFilters={selectedFilters}
@@ -77,52 +77,41 @@ const Page: React.FC = () => {
         isSidebarVisible={isSidebarVisible}
       />
 
-      <div className={`flex-grow transition-transform duration-300 ${isSidebarVisible ? 'ml-60' : 'ml-0'} mt-6 overflow-auto`}>
+      <div className={`flex transition-transform duration-300 mt-8 overflow-auto`}>
         {/* Main Content */}
-        <div className='p-4 sm:p-6 lg:p-8'>
+        <div className='p-6'>
           {/* Combined Section */}
           <div className='mt-6'>
             {Object.keys(groupedItems).map(game => (
               <div key={game} className='mb-12'>
-                <h4 className='text-2xl font-bold text-white mb-4'>{game}</h4>
+                <h4 className='text-3xl font-bold text-white mb-6'>{game}</h4>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                   {groupedItems[game].map(item => (
                     <Link
                       key={item.id}
                       href={item.link}
-                      className='relative bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center hover:outline hover:outline-2 hover:outline-blue-500 hover:animate-pulseOutline transition-transform duration-250 transform hover:scale-105'
+                      className='relative bg-gray-800 p-5 rounded-xl shadow-lg flex flex-col items-center transition-all transform hover:scale-105 hover:shadow-2xl hover:outline outline-2 outline-indigo-500'
                     >
-                      <div className='w-40 h-40 flex items-center justify-center overflow-hidden bg-black rounded-lg'>
+                      <div className='w-32 h-32 flex items-center justify-center overflow-hidden bg-black rounded-lg'>
                         <Image
                           src={item.img}
                           alt={item.title}
-                          width={400} // Fixed width for image
-                          height={400} // Fixed height for image
+                          width={128} // Fixed width for image
+                          height={128} // Fixed height for image
                           className='object-cover'
                         />
                       </div>
-                      <Tooltip title={`${item.game}`} arrow>
-                        <div className='absolute top-2 left-2 flex items-center bg-gray-800 text-white text-xs px-2 py-1 rounded-full'>
-                          <FaGamepad className='mr-1 text-pink-500' />
-                          {item.game}
-                        </div>
-                      </Tooltip>
-                      <Tooltip title={`Version ${item.version}`} arrow>
-                        <div className='absolute bottom-2 right-2 flex items-center bg-gray-800 text-white text-xs px-2 py-1 rounded-full cursor-pointer'>
-                          <FaCheckCircle className='mr-1 text-green-500' />
-                          {item.version}
-                        </div>
-                      </Tooltip>
-                      <p className='text-white text-center mt-4 text-md font-semibold'>
-                        {item.title}
-                      </p>
-                      <p className='text-white text-center text-sm mt-2 flex items-center justify-center'>
-                        <FaUser className='mr-1 text-white' />
+                      <p className='text-white text-center mt-4 text-lg font-semibold'>{item.title}</p>
+                      <div className='text-sm text-gray-400 mt-2'>Game: {item.game}</div>
+                      <div className='text-sm text-gray-400'>Convoy: {item.mp_optional}</div>
+                      <div className='text-sm text-gray-400 mb-4'>Game Version: {item.version}</div>
+                      <div className='flex justify-center items-center text-sm text-gray-300'>
+                        <FaUser className='mr-2' />
                         {item.author}
                         {verifiedAuthors.includes(item.author) && (
-                          <FaCheckCircle className='ml-1 w-4 h-4 text-blue-500' />
+                          <FaCheckCircle className='ml-2 w-4 h-4 text-blue-500' />
                         )}
-                      </p>
+                      </div>
                     </Link>
                   ))}
                 </div>

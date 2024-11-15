@@ -5,6 +5,7 @@ import { HomeIcon, UserCircleIcon, CogIcon, UploadIcon, MenuIcon } from "@heroic
 import { FormGroup, FormControlLabel, Checkbox, TextField, InputAdornment, IconButton } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import { mods as modData } from '@/components/Main';  // Import DLC data if needed
+import { Typewriter } from 'react-simple-typewriter'
 
 type Props = {
   selectedFilters: string[];
@@ -102,13 +103,14 @@ const Sidebar: React.FC<Props> = ({ selectedFilters, onFilterChange, searchQuery
             <HomeIcon className='w-6 h-6 md:w-8 md:h-8' />
             <p className='text-sm md:text-base'>Home</p>
           </Link>
+
         </div>
 
         <div className='flex items-center justify-center flex-grow'>
           <div className='relative w-80' ref={searchRef} onBlur={handleBlur}>
             <TextField
               variant="outlined"
-              placeholder="Search..."
+              placeholder="🔎 Search..."
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               onFocus={handleFocus}
@@ -148,51 +150,7 @@ const Sidebar: React.FC<Props> = ({ selectedFilters, onFilterChange, searchQuery
         </div>
       </div>
 
-      {/* Sidebar with Filters */}
-      <div
-        className={`fixed top-16 md:top-16 left-0 md:left-0 bg-[#1E1E1E] border-r border-gray-700 p-4 md:w-64 md:h-screen overflow-y-auto z-10 transition-transform duration-300 ${
-          localSidebarVisible ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
-        }`}
-      >
-        <h2 className='text-lg font-semibold mb-4'>Filters</h2>
-        <FormGroup>
-          <h2 className='text-lg font-semibold'>Games:</h2>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={selectedFilters.includes('ATS')}
-                onChange={handleCheckboxChange('ATS')}
-                sx={{
-                  '& .MuiSvgIcon-root': { fontSize: 24 },
-                  color: '#B0B0B0',
-                  '&.Mui-checked': {
-                    color: '#9C27B0',
-                  },
-                }}
-              />
-            }
-            label="ATS"
-            sx={{ mb: 1, color: '#B0B0B0' }}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={selectedFilters.includes('ETS 2')}
-                onChange={handleCheckboxChange('ETS 2')}
-                sx={{
-                  '& .MuiSvgIcon-root': { fontSize: 24 },
-                  color: '#B0B0B0',
-                  '&.Mui-checked': {
-                    color: '#9C27B0',
-                  },
-                }}
-              />
-            }
-            label="ETS 2"
-            sx={{ mb: 1, color: '#B0B0B0' }}
-          />
-        </FormGroup>
-      </div>
+      
     </div>
   );
 }
