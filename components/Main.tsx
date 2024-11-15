@@ -49,7 +49,6 @@ export interface Mod {
   game: string;
   version: string;
   author: string;
-  downloadCount: number;
   link: string;
 }
 
@@ -63,9 +62,26 @@ const mods: Mod[] = [
       game: "ETS 2",
       version: "1.52",
       author: "KimDog",
-      downloadCount: 0, // Static download count
       link: "/mods/ets2/kimdog-network-mod-pack",
-    }
+    },
+    {
+      id: 2,
+      img: '/assets/DLC/ETS2.jpeg',
+      title: "ETS 2 All DLC",
+      game: "ETS 2",
+      version: "1.52",
+      author: "MosbyMods.de",
+      link: "/dlc/ets2",
+    },
+    {
+      id: 2,
+      img: '/assets/KimDogLogo.png',
+      title: "Realistic Economy",
+      game: "ATS",
+      version: "1.52",
+      author: "KimDog",
+      link: "/mods/ats/realistic_economy",
+    },
 ];
 
 export { mods, verifiedAuthors };

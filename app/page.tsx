@@ -92,12 +92,12 @@ const Page: React.FC = () => {
                       href={item.link}
                       className='relative bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center hover:outline hover:outline-2 hover:outline-blue-500 hover:animate-pulseOutline transition-transform duration-250 transform hover:scale-105'
                     >
-                      <div className='w-56 h-56 flex items-center justify-center overflow-hidden bg-black rounded-lg'>
+                      <div className='w-40 h-40 flex items-center justify-center overflow-hidden bg-black rounded-lg'>
                         <Image
                           src={item.img}
                           alt={item.title}
-                          width={200} // Fixed width for image
-                          height={200} // Fixed height for image
+                          width={400} // Fixed width for image
+                          height={400} // Fixed height for image
                           className='object-cover'
                         />
                       </div>

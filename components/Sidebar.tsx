@@ -146,22 +146,6 @@ const Sidebar: React.FC<Props> = ({ selectedFilters, onFilterChange, searchQuery
             )}
           </div>
         </div>
-
-        <div className='hidden md:flex items-center space-x-4'>
-          <Link href="/upload" className='flex items-center space-x-2 text-white hover:text-purple-500 transition'>
-            <UploadIcon className='w-6 h-6 md:w-8 md:h-8' />
-            <p className='text-sm md:text-base'>Upload</p>
-          </Link>
-
-          <Link href="/signin" className='flex items-center space-x-2 text-white hover:text-purple-500 transition'>
-            <UserCircleIcon className='w-6 h-6 md:w-8 md:h-8' />
-            <p className='text-sm md:text-base'>Sign In</p>
-          </Link>
-
-          <Link href="/settings" className='flex items-center space-x-2 text-white hover:text-purple-500 transition'>
-            <CogIcon className='w-6 h-6 md:w-8 md:h-8' />
-          </Link>
-        </div>
       </div>
 
       {/* Sidebar with Filters */}
