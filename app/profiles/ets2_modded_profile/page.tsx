@@ -8,7 +8,7 @@ export default function RedirectPage() {
 
   useEffect(() => {
     // Open the external link in a new tab
-    window.open('https://modsfire.com/x45EhSV5aqLn895', '_blank');
+    window.open('https://modsfire.com/Qssq50F8aa1E5k2', '_blank');
     // Optionally redirect to a different page in your app after opening the new tab
     router.push('/');
   }, [router]);
