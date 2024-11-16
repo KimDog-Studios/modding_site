@@ -112,7 +112,7 @@ const mods: Mod[] = [
   },
   {
     id: 5,
-    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/christmas_update/jbm_christmas.jpg',
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/jbm_christmas.jpg',
     title: "KimDog's Network Christmas Update",
     game: "ETS 2",
     version: "1.52",
