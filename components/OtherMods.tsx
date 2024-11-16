@@ -6,6 +6,7 @@ import { verifiedAuthors } from './Main';
 const modsData = [
   { title: "KimDog's Realistic Economy", img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ATS/Economy/icon.jpg', link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3365680923', mp_optional: 'Yes', game: "American Truck Simulator", version: "1.52", author: "KimDog" },
   { title: "KimDog's Network Mod Pack", img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/KimDogLogo.png', link: '/mods/ets2/kimdog-network-mod-pack', mp_optional: 'Yes', game: "Euro Truck Simulator 2", version: "1.52", author: "KimDog" },
+  { title: "KimDog's Network Christmas Update", img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/jbm_christmas.jpg', link: '/mods/ets2/christmas_update', mp_optional: 'Yes', game: "Euro Truck Simulator 2", version: "1.52", author: "KimDog" },
 ];
 
 function OtherMods() {
