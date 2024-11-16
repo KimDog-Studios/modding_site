@@ -8,10 +8,18 @@ import {
   DialogContent,
   DialogTitle,
   Slide,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  ImageList,
+  ImageListItem,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ImageList, ImageListItem } from '@mui/material';
 import GradientCircularProgress from '@/components/Main';
 import OtherMods from '@/components/OtherMods';
 
@@ -32,6 +40,12 @@ const itemData = [
 ];
 
 const modName = [{ name: "KimDog's Network Christmas Update" }];
+
+const recommendedSettings = [
+  { setting: 'Color Correction', value: 'Enabled' },
+  { setting: 'Vegetation Detail', value: 'High' },
+  { setting: 'Grass Density', value: 'High' },
+];
 
 function Page() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
@@ -73,10 +87,7 @@ function Page() {
   };
 
   const handleProceed = () => {
-    window.open(
-      'link_here',
-      '_blank'
-    );
+    window.open('link_here', '_blank');
     setOpen(false);
   };
 
@@ -104,23 +115,21 @@ function Page() {
           <div className='flex-1 flex justify-center md:justify-end'>
             <ImageList
               sx={{
-                width: 680,
-                height: 680,
+                width: 600,
+                height: 600,
                 '&::-webkit-scrollbar': { display: 'none' }, // Hide scrollbar
               }}
               cols={2}
-              rowHeight={100}
-              gap={20}
+              rowHeight={150}
+              gap={15}
             >
               {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                >
+                <ImageListItem key={item.img}>
                   <Image
                     src={item.img}
                     alt='Game Image'
-                    width={320}
-                    height={300}
+                    width={280}
+                    height={260}
                     className='rounded-lg'
                   />
                 </ImageListItem>
@@ -132,18 +141,38 @@ function Page() {
           <div className='flex-1 md:ml-12'>
             <h2 className='text-2xl font-bold mb-4'>Description:</h2>
             <p className='text-lg leading-relaxed'>
-              This mod pack includes a variety of Changes to the World:
+              This mod pack includes a variety of changes to the world & gameplay:
               <ul className='list-disc ml-5 mt-2'>
                 <li>Snow</li>
                 <li>Snow Storms</li>
                 <li>Snowy Tyres</li>
-                <li>Icy Phyiscs</li>
+                <li>Icy Physics</li>
                 <li>Christmas Decorations</li>
                 <li>Christmas Cargo</li>
               </ul>
-              <br />
-              Credits to everyone whose items are included in the Mod Pack.
             </p>
+
+            <h3 className='mt-6 font-bold text-xl'>Recommended Settings:</h3>
+            {/* Recommended Settings Table */}
+            <TableContainer component={Paper} sx={{ backgroundColor: 'transparent', boxShadow: 'none', maxWidth: '250px'}}>
+              <Table size='medium' aria-label='recommended settings'>
+                <TableHead>
+                  <TableRow>
+                    <TableCell className='text-white font-bold'>Setting</TableCell>
+                    <TableCell className='text-white font-bold'>Value</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {recommendedSettings.map((row) => (
+                    <TableRow key={row.setting}>
+                      <TableCell className='text-white'>{row.setting}</TableCell>
+                      <TableCell className='text-white'>{row.value}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+
             <div className='mt-8'>
               <Button variant='contained' color='primary' onClick={handleClickOpen}>
                 Download
@@ -153,7 +182,7 @@ function Page() {
         </div>
 
         <div className='flex justify-center mt-20 font-black text-2xl'>
-          <OtherMods/>
+          <OtherMods />
         </div>
 
         {/* Dialog for Confirmation */}
