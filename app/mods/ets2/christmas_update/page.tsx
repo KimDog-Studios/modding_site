@@ -24,8 +24,11 @@ const Transition = React.forwardRef(function Transition(
 
 const itemData = [
   { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/1.webp' },
-  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/2.jpg' },
-  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/3.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/2.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/3.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/4.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/5.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/6.jpg' },
 ];
 
 const modName = [{ name: "KimDog's Network Christmas Update" }];
@@ -71,7 +74,7 @@ function Page() {
 
   const handleProceed = () => {
     window.open(
-      'https://drive.google.com/file/d/1HO0b4pI1Qrt3eIAgntycIGdjbuuAjGxJ/view?usp=sharing',
+      '',
       '_blank'
     );
     setOpen(false);
@@ -134,7 +137,7 @@ function Page() {
                 <li>Snow</li>
                 <li>Christmas Decorations</li>
                 <li>Christmas Jobs</li>
-                <li>Ice Phyiscs</li>
+                <li>Icy Phyiscs</li>
                 <li>Snowy Tyres</li>
               </ul>
               <br />
