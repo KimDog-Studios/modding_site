@@ -110,6 +110,16 @@ const mods: Mod[] = [
     link: "/dlc/ats",
     mp_optional: 'Yes',
   },
+  {
+    id: 5,
+    img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/christmas_update/jbm_christmas.jpg',
+    title: "KimDog's Network Christmas Update",
+    game: "ETS 2",
+    version: "1.52",
+    author: "KimDog",
+    link: "/dlc/ats",
+    mp_optional: 'Yes',
+  },
 ];
 
 // Profile Data
