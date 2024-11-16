@@ -74,7 +74,7 @@ function Page() {
 
   const handleProceed = () => {
     window.open(
-      '',
+      'link_here',
       '_blank'
     );
     setOpen(false);
@@ -135,10 +135,11 @@ function Page() {
               This mod pack includes a variety of Changes to the World:
               <ul className='list-disc ml-5 mt-2'>
                 <li>Snow</li>
-                <li>Christmas Decorations</li>
-                <li>Christmas Jobs</li>
-                <li>Icy Phyiscs</li>
+                <li>Snow Storms</li>
                 <li>Snowy Tyres</li>
+                <li>Icy Phyiscs</li>
+                <li>Christmas Decorations</li>
+                <li>Christmas Cargo</li>
               </ul>
               <br />
               Credits to everyone whose items are included in the Mod Pack.
