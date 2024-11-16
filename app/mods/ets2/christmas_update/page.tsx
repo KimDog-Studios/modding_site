@@ -26,9 +26,9 @@ const itemData = [
   { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/1.webp' },
   { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/2.jpg' },
   { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/3.jpg' },
-  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_sitemain/public/assets/Mods/ETS2/christmas_update/4.jpg' },
-  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_sitemain/public/assets/Mods/ETS2/christmas_update/5.jpg' },
-  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_sitemain/public/assets/Mods/ETS2/christmas_update/6.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/4.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/5.jpg' },
+  { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/Mods/ETS2/christmas_update/6.jpg' },
 ];
 
 const modName = [{ name: "KimDog's Network Christmas Update" }];
