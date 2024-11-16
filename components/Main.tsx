@@ -117,7 +117,7 @@ const mods: Mod[] = [
     game: "ETS 2",
     version: "1.52",
     author: "KimDog",
-    link: "/dlc/ats",
+    link: "/mods/ets2/christmas_update",
     mp_optional: 'Yes',
   },
 ];
