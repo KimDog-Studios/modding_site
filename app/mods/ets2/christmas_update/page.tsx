@@ -28,7 +28,7 @@ const itemData = [
   { img: 'https://raw.githubusercontent.com/KimDog-Studios/modding_site/main/public/assets/mods/ETS2/christmas_update/3.jpg' },
 ];
 
-const modName = [{ name: "KimDog's Network Christmas Upadte" }];
+const modName = [{ name: "KimDog's Network Christmas Update" }];
 
 function Page() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
